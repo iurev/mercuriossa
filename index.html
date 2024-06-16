@@ -1,0 +1,85 @@
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f5f5f5;
+        height: 100%;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        padding: 20px;
+        min-height: 400px;
+        height: 100vh;
+    }
+  .btn { display: block; margin: 0 auto; }
+          .visualizer {
+        position: absolute;
+            pointer-events: none;
+            z-index: -1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        background-color: #f5f5f5;
+    }
+</style>
+</head>
+<body>
+<div class="container">   
+          <div style="display: flex; align-items: center; justify-content: space-between;" class="section">
+            <div style="display: flex; align-items: center; justify-content: center;">
+            <i style="margin-right: 5px;" class="material-icons">access_time</i>
+        <p id="recordingTime">0:00</p>
+            </div>
+            
+            <div style="display: flex; align-items: center; justify-content: center;">
+                              <i style="margin-right: 5px;" class="material-icons">filter_drama</i>
+
+              
+            <p id="status">Idle</p>
+            </div>
+            
+                            <div style="display: flex; align-items: center; justify-content: center;">
+
+              
+                              <p id="loudness"><code>0</code></p>
+                                                                <i style="margin-right: 5px;" class="material-icons">volume_down</i>
+
+            </div>
+    </div>
+  
+    <button id="startBtn" class="btn waves-effect waves-light btn-floating btn-large"><i class="material-icons">pets</i>
+</button>
+  
+          <div style="display: flex; align-items: center; justify-content: center;" class="section">            
+    </div>
+  
+          <button id="specialModeBtn" class="btn large waves-effect waves-light orange" style="display: flex; align-items: center;">
+            <div style="margin-right: 4px;">SPECIAL</div>
+            
+            <i class="material-icons">filter_vintage</i>
+            
+  
+  </button>
+  
+          <div class="section">
+        <p id="transcription"></p>
+    </div>
+
+  <br />
+    <button style="display: block; margin-top: auto;" id="saveBtn" class="btn large waves-effect waves-light" disabled>SAVE</button>
+
+</div>
+
+  <canvas id="visualizer" class="visualizer"></canvas>
+
+
+<script src="recorder.js"></script>
