@@ -1,3 +1,7 @@
+const appKey = '{{API_KEY}}';
+const secretKey = '{{SEC_KEY}}';
+const accessToken = '{{AC_TOKE}}';
+const openaiApiKey = '{{OPEN_AP}}';
 
 let generalRecorder, specialRecorder;
 let generalChunks = [], specialChunks = [];
